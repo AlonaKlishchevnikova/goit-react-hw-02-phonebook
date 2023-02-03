@@ -1,4 +1,4 @@
-import MyPhonebook from "modules/MyPhonebook/MyPhonebook";
+import MyPhonebook from "modules/MyPhonebook/MyPhonebooks";
 
 export const App = () => {
   return (
@@ -16,3 +16,4 @@ export const App = () => {
     </div>
   );
 };
+export default App;
