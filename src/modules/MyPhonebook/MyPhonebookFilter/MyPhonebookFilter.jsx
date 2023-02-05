@@ -3,17 +3,18 @@ import PropTypes from "prop-types";
 
 
 
-const  MyPhonebookFilter = ({handleChange}) => {
+const  MyPhonebookFilter = ({filter, handleChange}) => {
     return (
         <div >
             <label>Find contacts by name</label>
-            <input name="filter" onChange={handleChange} placeholder ="Find contact"></input>
+            <input name="filter" value={filter} onChange={handleChange} placeholder ="Find contact"></input>
         </div>
     )
 }
 
 export default  MyPhonebookFilter;
 
- MyPhonebookFilter.propTypes = {
+MyPhonebookFilter.propTypes = {
+     value: PropTypes.string.isRequired,
     handleChange: PropTypes.func.isRequired,
 }
