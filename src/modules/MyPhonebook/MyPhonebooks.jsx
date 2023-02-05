@@ -72,6 +72,7 @@ class MyPhonebook extends Component {
     }
 
     render() {
+        const { filter } = this.state;
         const {addContact,  removeContact, handleFilter} = this;
         const contacts = this.getFilteredContact();
         const isContacts = Boolean(contacts.length);
@@ -86,7 +87,7 @@ class MyPhonebook extends Component {
                     </div>
                 <div >
                     <h4>Contacts</h4>
-                        <MyPhonebookFilter handleChange={handleFilter} />
+                        <MyPhonebookFilter value={filter} handleChange={handleFilter} />
                         {isContacts && <MyPhonebookList removeContact={removeContact} contacts={contacts} />}
                         {!isContacts && <p>No contacts in list</p>}
                     </div>

@@ -15,6 +15,6 @@ const  MyPhonebookFilter = ({filter, handleChange}) => {
 export default  MyPhonebookFilter;
 
 MyPhonebookFilter.propTypes = {
-     value: PropTypes.string.isRequired,
+    filter: PropTypes.string.isRequired,
     handleChange: PropTypes.func.isRequired,
 }
